@@ -1,33 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Paths</title>
-    <style>
-        body { font-family: sans-serif; margin: 0; background: #111; color: #eee; }
-        nav {
-            background: #000;
-            padding: 12px;
-            border-bottom: 1px solid #333;
-        }
-        nav a { color: #0af; text-decoration: none; margin-right: 20px; font-weight: bold; }
-        nav a:hover { color: #0cf; }
-
-        .content { padding: 30px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learning Paths - Rutas de aprendizaje en ciberseguridad">
+  <meta name="keywords" content="learning path, roadmap, ciberseguridad, formación">
+  
+  <title>Learning Paths - B3RM3LL0N</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
+  <!-- Header/Navbar -->
+  <header></header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="paths.html">Paths</a>
-    </nav>
+  <!-- Main Content -->
+  <main class="content-wrapper">
+    <!-- Sección Hero -->
+    <section class="page-section">
+      <div class="container flex-col-center" style="min-height: 40vh;">
+        <div class="text-center mx-auto" style="max-width: 800px;">
+          <h1 class="mb-lg">🛤️ Learning Paths</h1>
+          <p class="text-lg text-muted">
+            Rutas de aprendizaje estructuradas para dominar diferentes áreas de la ciberseguridad.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <div class="content">
-        <h1>Paths de aprendizaje</h1>
-        <p>Acá irán rutas como “Pentesting Jr”, “Blue Team Jr”, blah.</p>
-    </div>
+    <!-- Paths -->
+    <section class="page-section">
+      <div class="container">
+        <div class="grid grid-cols-2">
+          <!-- Path 1 -->
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">🌱 Fundamentos</h3>
+              <p class="card__subtitle">Primer paso en ciberseguridad</p>
+            </div>
+            <div class="card__body">
+              <ul>
+                <li>Conceptos básicos de seguridad</li>
+                <li>Redes y protocolos</li>
+                <li>Sistemas operativos</li>
+                <li>Línea de comandos</li>
+              </ul>
+            </div>
+            <div class="card__footer">
+              <a href="#" class="btn btn-primary flex-1">Comenzar</a>
+            </div>
+          </div>
 
+          <!-- Path 2 -->
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">🔓 Pentesting Web</h3>
+              <p class="card__subtitle">Pruebas en aplicaciones web</p>
+            </div>
+            <div class="card__body">
+              <ul>
+                <li>OWASP Top 10</li>
+                <li>SQL Injection & XXS</li>
+                <li>Autenticación y autorización</li>
+                <li>Herramientas de pentesting</li>
+              </ul>
+            </div>
+            <div class="card__footer">
+              <a href="#" class="btn btn-primary flex-1">Comenzar</a>
+            </div>
+          </div>
+
+          <!-- Path 3 -->
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">🖥️ Sistemas & Red</h3>
+              <p class="card__subtitle">Seguridad en infraestructura</p>
+            </div>
+            <div class="card__body">
+              <ul>
+                <li>Seguridad en Linux/Windows</li>
+                <li>Firewalls y VPN</li>
+                <li>Active Directory</li>
+                <li>Análisis de malware</li>
+              </ul>
+            </div>
+            <div class="card__footer">
+              <a href="#" class="btn btn-primary flex-1">Comenzar</a>
+            </div>
+          </div>
+
+          <!-- Path 4 -->
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">🔬 Forensics & Respuesta</h3>
+              <p class="card__subtitle">Investigación y análisis</p>
+            </div>
+            <div class="card__body">
+              <ul>
+                <li>Análisis forense digital</li>
+                <li>Incident response</li>
+                <li>Logs y auditoría</li>
+                <li>Cadena de custodia</li>
+              </ul>
+            </div>
+            <div class="card__footer">
+              <a href="#" class="btn btn-primary flex-1">Comenzar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recursos -->
+    <section class="page-section" style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(107, 91, 149, 0.05) 100%);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__accent"></div>
+          <h2 class="section-header__title">Recursos Recomendados</h2>
+          <p class="section-header__subtitle">Plataformas y herramientas útiles</p>
+        </div>
+
+        <div class="grid grid-cols-3">
+          <div class="card">
+            <h4>📖 Documentación</h4>
+            <ul style="margin-left: var(--spacing-lg);">
+              <li><a href="https://owasp.org" target="_blank">OWASP</a></li>
+              <li><a href="https://cwe.mitre.org" target="_blank">CWE</a></li>
+              <li><a href="https://cisa.gov" target="_blank">CISA</a></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4>🎯 Plataformas de Práctica</h4>
+            <ul style="margin-left: var(--spacing-lg);">
+              <li><a href="https://hackthebox.com" target="_blank">HackTheBox</a></li>
+              <li><a href="https://tryhackme.com" target="_blank">TryHackMe</a></li>
+              <li><a href="https://app.cybrary.it" target="_blank">Cybrary</a></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4>🛠️ Herramientas</h4>
+            <ul style="margin-left: var(--spacing-lg);">
+              <li><a href="https://www.kali.org" target="_blank">Kali Linux</a></li>
+              <li><a href="https://portswigger.net/burp" target="_blank">Burp Suite</a></li>
+              <li><a href="https://www.wireshark.org" target="_blank">Wireshark</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer></footer>
+
+  <!-- Scripts -->
+  <script src="./assets/js/utils.js"></script>
+  <script src="./assets/js/markdown.js"></script>
+  <script src="./assets/js/components.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
