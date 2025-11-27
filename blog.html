@@ -3,79 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Blog - Artículos sobre hacking ético y ciberseguridad">
-  <meta name="keywords" content="hacking, ciberseguridad, tutoriales, pentest">
-  
+  <meta name="description" content="Blog - Articulos sobre hacking etico y ciberseguridad">
   <title>Blog - B3RM3LL0N</title>
-  
-  <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/layout.css">
   <link rel="stylesheet" href="./assets/css/components.css">
   <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
-  <!-- Header/Navbar -->
-  <header></header>
+  <header class="navbar">
+    <a href="index.html" class="navbar__brand">B3RM3LL0N</a>
+    <nav class="navbar__menu">
+      <ul style="list-style: none; margin: 0; display: flex; gap: 24px;">
+        <li><a href="index.html" class="navbar__link">Inicio</a></li>
+        <li><a href="blog.html" class="navbar__link">Blog</a></li>
+        <li><a href="paths.html" class="navbar__link">Paths</a></li>
+        <li><a href="https://github.com/B3rm3ll0n" target="_blank" class="navbar__link">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Main Content -->
-  <main class="content-wrapper">
-    <!-- Sección Hero -->
-    <section class="page-section">
-      <div class="container flex-col-center" style="min-height: 40vh;">
-        <div class="text-center mx-auto" style="max-width: 800px;">
-          <h1 class="mb-lg">📝 Blog</h1>
-          <p class="text-lg text-muted">
-            Artículos sobre hacking ético, ciberseguridad, pentesting y más.
-          </p>
-        </div>
+  <main style="flex: 1;">
+    <section style="padding: 64px 0; background: var(--color-darker);">
+      <div class="container" style="text-align: center;">
+        <h1 style="margin-bottom: 16px;">Blog</h1>
+        <p style="color: var(--color-text-muted);">
+          Articulos sobre hacking etico, ciberseguridad, pentesting y mas.
+        </p>
       </div>
     </section>
 
-    <!-- Filtros (opcional) -->
-    <section class="page-section">
+    <section style="padding: 64px 0;">
       <div class="container">
-        <div class="flex justify-center gap-md flex-wrap mb-lg">
-          <button class="tag" data-filter="all">Todos</button>
-          <button class="tag" data-filter="pentesting">🔓 Pentesting</button>
-          <button class="tag" data-filter="web">🌐 Web</button>
-          <button class="tag" data-filter="tools">🛠️ Herramientas</button>
-          <button class="tag" data-filter="tutorial">📚 Tutoriales</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Posts -->
-    <section class="page-section">
-      <div class="container">
-        <div class="grid grid-auto" data-posts-container>
-          <!-- Los posts se cargarán dinámicamente aquí -->
-          <div class="alert alert-info">Cargando posts...</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Paginación (opcional) -->
-    <section class="page-section">
-      <div class="container">
-        <div class="flex justify-center gap-md">
-          <button class="btn btn-outline" data-page-prev>← Anterior</button>
-          <div class="flex align-center">
-            <span class="text-muted">Página <span data-current-page>1</span></span>
-          </div>
-          <button class="btn btn-outline" data-page-next>Siguiente →</button>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+          <article style="background: var(--color-bg-hover); border: 1px solid var(--color-border); border-radius: 8px; padding: 24px;">
+            <h3><a href="#">Introduccion al Hacking Etico</a></h3>
+            <p style="color: var(--color-text-muted); font-size: 14px;">Octubre 2024</p>
+            <p>Conceptos fundamentales del hacking etico, metodologias y marco legal para iniciarse en pentesting responsable.</p>
+            <a href="#">Leer mas</a>
+          </article>
+          
+          <article style="background: var(--color-bg-hover); border: 1px solid var(--color-border); border-radius: 8px; padding: 24px;">
+            <h3><a href="#">OWASP Top 10 - Vulnerabilidades Web</a></h3>
+            <p style="color: var(--color-text-muted); font-size: 14px;">Septiembre 2024</p>
+            <p>Analisis detallado de las 10 vulnerabilidades web mas criticas segun OWASP, con ejemplos practicos.</p>
+            <a href="#">Leer mas</a>
+          </article>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer></footer>
+  <footer class="footer p-lg">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: center; margin-bottom: 24px;">
+        <div>
+          <h4>Navegacion</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="paths.html">Paths</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="https://github.com/B3rm3ll0n" target="_blank">GitHub</a></li>
+            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Terminos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div style="text-align: center; color: var(--color-text-muted);">
+        <p>Copyright 2025 B3RM3LL0N | Hacking Etico & Ciberseguridad</p>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Scripts -->
   <script src="./assets/js/utils.js"></script>
   <script src="./assets/js/markdown.js"></script>
-  <script src="./assets/js/components.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>

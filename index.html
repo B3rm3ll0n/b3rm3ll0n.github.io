@@ -3,135 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="B3RM3LL0N - Sitio personal de Hacking Ético y Ciberseguridad">
-  <meta name="keywords" content="hacking ético, ciberseguridad, pentesting, infosec">
-  <meta name="author" content="B3RM3LL0N">
-  
-  <title>B3RM3LL0N - Hacking Ético</title>
-  
-  <!-- CSS -->
+  <meta name="description" content="B3RM3LL0N - Hacking Etico y Ciberseguridad">
+  <title>B3RM3LL0N - Hacking Etico</title>
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/layout.css">
   <link rel="stylesheet" href="./assets/css/components.css">
   <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
-  <!-- Header/Navbar -->
-  <header></header>
+  <header class="navbar">
+    <a href="index.html" class="navbar__brand">B3RM3LL0N</a>
+    <nav class="navbar__menu">
+      <ul style="list-style: none; margin: 0; display: flex; gap: 24px;">
+        <li><a href="index.html" class="navbar__link">Inicio</a></li>
+        <li><a href="blog.html" class="navbar__link">Blog</a></li>
+        <li><a href="paths.html" class="navbar__link">Paths</a></li>
+        <li><a href="https://github.com/B3rm3ll0n" target="_blank" class="navbar__link">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Main Content -->
-  <main class="content-wrapper">
-    <!-- Sección Hero -->
-    <section class="page-section">
-      <div class="container flex-col-center" style="min-height: 60vh;">
-        <div class="text-center mx-auto" style="max-width: 800px;">
-          <h1 class="mb-lg" style="font-size: 4rem;">
-            <span class="text-accent">⚡</span> B3RM3LL0N
-          </h1>
-          
-          <p class="text-lg text-muted mb-lg">
-            Desarrollador de seguridad ofensiva & especialista en hacking ético.
-          </p>
-          
-          <p class="text-base mb-2xl">
-            Explorando vulnerabilidades, aprendiendo cada día y compartiendo conocimiento 
-            sobre ciberseguridad, pentesting y seguridad ofensiva.
-          </p>
-
-          <div class="flex justify-center gap-lg flex-wrap">
-            <a href="blog.html" class="btn btn-primary btn-large">📝 Leer Blog</a>
-            <a href="paths.html" class="btn btn-outline btn-large">🛤️ Learning Paths</a>
-            <a href="https://github.com/B3rm3ll0n" target="_blank" class="btn btn-ghost btn-large">⭐ GitHub</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección Skills -->
-    <section class="page-section">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-header__accent"></div>
-          <h2 class="section-header__title">Especialidades</h2>
-          <p class="section-header__subtitle">Áreas en las que me especializo</p>
-        </div>
-
-        <div class="grid grid-cols-3">
-          <div class="card">
-            <div class="card__header">
-              <h3 class="card__title">🔓 Pentesting</h3>
-              <p class="card__subtitle">Pruebas de penetración</p>
-            </div>
-            <div class="card__body">
-              <p>Análisis de vulnerabilidades, explotación y reportes de seguridad en aplicaciones web y sistemas.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card__header">
-              <h3 class="card__title">🛡️ Defensa</h3>
-              <p class="card__subtitle">Hardening y secure coding</p>
-            </div>
-            <div class="card__body">
-              <p>Implementación de controles de seguridad, secure coding practices y arquitectura defensiva.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card__header">
-              <h3 class="card__title">📚 Educación</h3>
-              <p class="card__subtitle">Formación en ciberseguridad</p>
-            </div>
-            <div class="card__body">
-              <p>Documentación, tutoriales y recursos para aprender hacking ético de forma práctica y responsable.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección Últimos Posts -->
-    <section class="page-section">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-header__accent"></div>
-          <h2 class="section-header__title">Últimos Posts</h2>
-          <p class="section-header__subtitle">Lee mis últimos artículos sobre hacking ético</p>
-        </div>
-
-        <div class="grid grid-auto" data-posts-container>
-          <!-- Los posts se cargarán dinámicamente aquí -->
-          <div class="alert alert-info">Cargando posts...</div>
-        </div>
-
-        <div class="text-center mt-lg">
-          <a href="blog.html" class="btn btn-outline">Ver todos los posts →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección CTA -->
-    <section class="page-section" style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(107, 91, 149, 0.05) 100%);">
-      <div class="container flex-col-center text-center py-2xl">
-        <h2 class="mb-lg">¿Preguntas o colaboraciones?</h2>
-        <p class="text-lg text-muted mb-lg" style="max-width: 600px;">
-          Abierto a discutir temas de seguridad, colaborar en proyectos o ayudarte con tus dudas.
+  <main style="flex: 1;">
+    <section style="padding: 64px 0; display: flex; align-items: center; justify-content: center; min-height: 60vh;">
+      <div class="container" style="text-align: center;">
+        <h1 style="font-size: 48px; margin-bottom: 16px;">B3RM3LL0N</h1>
+        <p style="font-size: 18px; color: var(--color-text-muted); margin-bottom: 16px;">
+          Desarrollador de seguridad ofensiva & especialista en hacking etico.
         </p>
-        <div class="flex justify-center gap-lg">
-          <a href="mailto:hello@example.com" class="btn btn-primary btn-large">📧 Contacto</a>
-          <a href="https://github.com/B3rm3ll0n" target="_blank" class="btn btn-secondary btn-large">👨‍💻 Mi GitHub</a>
+        <p style="margin-bottom: 32px;">
+          Explorando vulnerabilidades, aprendiendo cada dia y compartiendo conocimiento 
+          sobre ciberseguridad, pentesting y seguridad ofensiva.
+        </p>
+        <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
+          <a href="blog.html" class="btn btn-primary">Leer Blog</a>
+          <a href="paths.html" class="btn btn-outline">Learning Paths</a>
+          <a href="https://github.com/B3rm3ll0n" target="_blank" class="btn btn-outline">GitHub</a>
         </div>
+      </div>
+    </section>
+
+    <section style="padding: 64px 0; background: var(--color-darker);">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 32px;">Especialidades</h2>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <div style="background: var(--color-bg-hover); border: 1px solid var(--color-border); border-radius: 8px; padding: 24px;">
+            <h3 style="margin-bottom: 16px;">Pentesting</h3>
+            <p>Analisis de vulnerabilidades, explotacion y reportes de seguridad en aplicaciones web y sistemas.</p>
+          </div>
+          <div style="background: var(--color-bg-hover); border: 1px solid var(--color-border); border-radius: 8px; padding: 24px;">
+            <h3 style="margin-bottom: 16px;">Defensa</h3>
+            <p>Implementacion de controles de seguridad, secure coding practices y arquitectura defensiva.</p>
+          </div>
+          <div style="background: var(--color-bg-hover); border: 1px solid var(--color-border); border-radius: 8px; padding: 24px;">
+            <h3 style="margin-bottom: 16px;">Educacion</h3>
+            <p>Documentacion, tutoriales y recursos para aprender hacking etico de forma practica y responsable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 64px 0;">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 32px;">Blog</h2>
+        <p style="text-align: center; margin-bottom: 24px;">
+          <a href="blog.html" class="btn btn-outline">Ver todos los posts</a>
+        </p>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer></footer>
+  <footer class="footer p-lg">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: center; margin-bottom: 24px;">
+        <div>
+          <h4>Navegacion</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="paths.html">Paths</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="https://github.com/B3rm3ll0n" target="_blank">GitHub</a></li>
+            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Terminos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div style="text-align: center; color: var(--color-text-muted);">
+        <p>Copyright 2025 B3RM3LL0N | Hacking Etico & Ciberseguridad</p>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Scripts -->
   <script src="./assets/js/utils.js"></script>
   <script src="./assets/js/markdown.js"></script>
-  <script src="./assets/js/components.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>

@@ -1,18 +1,17 @@
 # b3rm3ll0n.github.io
 
-Sitio web estático modular y escalable dedicado a **Hacking Ético y Ciberseguridad**.
+Sitio web estatico modular y escalable dedicado a **Hacking Etico y Ciberseguridad**.
 
-## 🎯 Características
+## Caracteristicas
 
-- ✅ **HTML + CSS + JavaScript puro** - Sin frameworks, código limpio
-- ✅ **Modular y escalable** - Componentes reutilizables
-- ✅ **Responsive design** - Mobile, tablet y desktop
-- ✅ **Parser Markdown integrado** - Carga de posts dinámicos
-- ✅ **Componentes dinámicos** - Sistema de carga de componentes
-- ✅ **Tema oscuro moderno** - Minimalista y profesional
-- ✅ **Compatible con GitHub Pages** - Deployment sencillo
+- HTML + CSS + JavaScript puro - Sin frameworks, codigo limpio
+- Modular y escalable - Componentes reutilizables
+- Responsive design - Mobile, tablet y desktop
+- Parser Markdown integrado - Carga de posts dinamicos
+- Tema oscuro moderno - Minimalista y profesional
+- Compatible con GitHub Pages - Deployment sencillo
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 .
@@ -24,25 +23,23 @@ Sitio web estático modular y escalable dedicado a **Hacking Ético y Cibersegur
 │   │   └── responsive.css     # Media queries
 │   ├── js/
 │   │   ├── utils.js           # Funciones auxiliares
-│   │   ├── markdown.js        # Parser Markdown → HTML
-│   │   ├── components.js      # Sistema de componentes
-│   │   └── main.js            # Lógica principal
-│   ├── images/                # Imágenes estáticas
+│   │   ├── markdown.js        # Parser Markdown a HTML
+│   │   └── main.js            # Logica principal
+│   ├── images/                # Imagenes estaticas
 │   └── posts/                 # Posts en Markdown
 │
 ├── components/
 │   ├── header.html            # Navbar/Header
 │   ├── footer.html            # Footer
-│   ├── navbar.html            # Navegación (alternativa)
-│   └── post-card.html         # Card de post
+│   └── navbar.html            # Navegacion
 │
-├── index.html                 # Página de inicio
-├── blog.html                  # Página del blog
+├── index.html                 # Pagina de inicio
+├── blog.html                  # Pagina del blog
 ├── paths.html                 # Learning paths
-└── README.md                  # Documentación
+└── README.md                  # Documentacion
 ```
 
-## 🚀 Inicio Rápido
+## Inicio Rapido
 
 ### 1. Clonar el repositorio
 
@@ -51,49 +48,38 @@ git clone https://github.com/B3rm3ll0n/b3rm3ll0n.github.io.git
 cd b3rm3ll0n.github.io
 ```
 
-### 2. Servir localmente
+### 2. Ver localmente
 
-```bash
-python -m http.server 8000
-```
+Abre index.html directamente en tu navegador (sin servidor requerido).
 
 ### 3. Editar contenido
 
 - **Blog**: Agrega archivos `.md` en `assets/posts/`
-- **Componentes**: Edita archivos en `components/`
 - **Estilos**: Modifica archivos CSS en `assets/css/`
 
-## 📝 Crear Posts
+## Crear Posts
 
 Los posts se escriben en **Markdown** con metadatos YAML:
 
 ```markdown
 ---
-title: Título del Post
+title: Titulo del Post
 date: 2025-11-26
-excerpt: Descripción breve
+excerpt: Descripcion breve
 tags: tag1, tag2, tag3
 ---
 
 # Contenido del Post
 ```
 
-## 🧩 Sistema de Componentes
+## Desplegar en GitHub Pages
 
-Componentes modulares cargados dinámicamente:
+Settings > Pages > main branch
 
-```javascript
-await ComponentManager.load('header', './components/header.html');
-```
+## Autor
 
-## 🚀 Desplegar en GitHub Pages
+**B3RM3LL0N** - Especialista en Hacking Etico y Ciberseguridad
 
-Settings → Pages → main branch
-
-## 👨‍💻 Autor
-
-**B3RM3LL0N** - Especialista en Hacking Ético y Ciberseguridad
-
-## 📄 Licencia
+## Licencia
 
 MIT
