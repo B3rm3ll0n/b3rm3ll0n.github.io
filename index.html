@@ -1,11 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Lado B] - Home</title>    
+    <link rel="stylesheet" href="./assets/css/main.css">    
+</head>
+
 <body>
+    <div id="navbar"></div>
 
-<div id="navbar"></div>
+    <!-- CONTENIDO -->
+    <main>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 60px 16px;">
+            <h1>Bienvenido a Lado B</h1>
+            <p>Hacking y Gilada</p>
+        </div>
+    </main>
 
-<!-- CONTENIDO -->
-<h1>Hola Mundo!</h1>
+    <div id="footer"></div>
 
-<div id="footer"></div>
+    <script>
+        // Load navbar
+        fetch('./components/navbar.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('navbar').innerHTML = html);
 
-<script src="/assets/js/loader.js"></script>
+        // Load footer
+        fetch('./components/footer.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('footer').innerHTML = html);
+    </script>
 </body>
+</html>
