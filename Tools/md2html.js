@@ -91,44 +91,44 @@ function generateHtmlTemplate(front, htmlContent) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${front.title}</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; background: #f9f9f9; }
-        main { max-width: 1200px; margin: 0 auto; padding: 60px 16px; }
-        article { background: white; border-radius: 8px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h1 { font-size: 2.5em; margin-bottom: 16px; color: #1a1a1a; }
-        h2 { font-size: 1.8em; margin: 24px 0 16px 0; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; }
-        h3 { font-size: 1.4em; margin: 20px 0 12px 0; color: #34495e; }
-        p { margin-bottom: 16px; text-align: justify; }
-        code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', Courier, monospace; color: #d73a49; }
-        pre { background: #282c34; color: #abb2bf; padding: 16px; border-radius: 6px; overflow-x: auto; margin: 16px 0; }
-        pre code { background: none; padding: 0; color: inherit; }
-        blockquote { border-left: 4px solid #3498db; padding-left: 16px; margin: 16px 0; color: #666; font-style: italic; }
-        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
-        table th { background: #3498db; color: white; padding: 12px; text-align: left; }
-        table td { border: 1px solid #ddd; padding: 12px; }
-        table tr:nth-child(even) { background: #f9f9f9; }
-        a { color: #3498db; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        ul, ol { margin-left: 24px; margin-bottom: 16px; }
-        li { margin-bottom: 8px; }
-        img { max-width: 100%; height: auto; margin: 16px 0; border-radius: 6px; }
-        .meta { color: #aaa; font-size: 14px; margin-bottom: 24px; }
-    </style>
+
+    <!-- Theme global -->
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
+
+    <!-- NAVBAR dinámica -->
+    <div id="navbar"></div>
+
     <main>
-        <article>
-            <h1>${front.title}</h1>
-            <p class="meta">${front.date}</p>
-            <div>
+        <article class="post-container" style="max-width: 900px; margin: 0 auto; padding: 40px 16px;">
+            <h1 style="margin-bottom: 10px;">${front.title}</h1>
+            <p class="meta" style="opacity: 0.7; margin-bottom: 25px;">${front.date}</p>
+
+            <div class="post-content">
 ${htmlContent}
             </div>
         </article>
     </main>
+
+    <!-- FOOTER dinámico -->
+    <div id="footer"></div>
+
+    <!-- Cargar componentes -->
+    <script>
+      fetch("/components/navbar.html")
+        .then(r => r.text())
+        .then(h => document.getElementById("navbar").innerHTML = h);
+
+      fetch("/components/footer.html")
+        .then(r => r.text())
+        .then(h => document.getElementById("footer").innerHTML = h);
+    </script>
+
 </body>
 </html>`;
 }
+
 
 /**
  * Función principal

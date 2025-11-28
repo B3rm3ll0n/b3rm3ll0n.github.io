@@ -1,0 +1,74 @@
+# 🧪 Testing Markdown — Archivo Completo
+
+## 1. Encabezados
+
+# Título H1  
+## Título H2  
+### Título H3  
+#### Título H4  
+##### Título H5  
+###### Título H6  
+
+---
+
+## 2. Párrafos y texto básico
+
+Esto es un párrafo común.  
+Salto de línea manual usando dos espacios al final.  
+
+---
+
+## 3. Estilos de texto
+
+**Negrita**  
+*Itálica*  
+***Negrita e itálica***  
+~~Tachado~~  
+<u>Subrayado (HTML)</u>  
+==Texto resaltado (Extensión)==  
+
+---
+
+## 4. Citas
+
+> Esto es una cita.  
+> Segunda línea de la cita.
+
+>> Cita anidada
+
+---
+
+## 5. Listas
+
+### Lista desordenada
+- Item 1  
+- Item 2  
+  - Subitem  
+  - Subitem  
+- Item 3  
+
+### Lista ordenada
+1. Paso 1  
+2. Paso 2  
+3. Paso 3  
+   1. Subpaso  
+   2. Subpaso  
+
+### Lista de tareas
+- [ ] Tarea pendiente  
+- [x] Tarea completada  
+- [ ] Otra tarea  
+
+---
+
+## 6. Código
+
+### Código inline  
+`console.log("Hola mundo");`
+
+### Bloque de código
+```javascript
+function saludar() {
+  return "Hola!";
+}
+console.log(saludar());
