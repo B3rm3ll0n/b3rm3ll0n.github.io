@@ -84,37 +84,18 @@ async function markdownToHtml(mdContent) {
  * @param {string} htmlContent - Contenido HTML
  * @returns {string} HTML completo
  */
-function generateHtmlTemplate(front, htmlContent) {
+function generateHtmlTemplate(front, htmlContent, navbarHtml = '', footerHtml = '') {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${front.title}</title>
-    
-    <!-- Theme global -->
     <link rel="stylesheet" href="/assets/css/main.css">
-    <!-- Cargar componentes -->
-<script>
-fetch("../../components/navbar.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("navbar").innerHTML = html;
-  });
-
-// Cargar footer
-fetch("../components/footer.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("footer").innerHTML = html;
-  });
-</script>
-
   </head>
 <body>
 
-    <!-- NAVBAR dinámica -->
-    <div id="navbar"></div>
+    <div id="navbar">${navbarHtml}</div>
 
     <main>
         <article class="post-container" style="max-width: 900px; margin: 0 auto; padding: 40px 16px;">
@@ -127,10 +108,10 @@ ${htmlContent}
         </article>
     </main>
 
-    <!-- FOOTER dinámico -->
-    <div id="footer"></div>
+    <div id="footer">${footerHtml}</div>
 
-    
+    <script src="/assets/js/loader.js"></script>
+
 </body>
 </html>`;
 }
@@ -170,8 +151,14 @@ async function main() {
     const htmlContent = await markdownToHtml(content);
     console.log('✅ Markdown convertido a HTML');
 
-    // Generar HTML completo
-    const htmlFinal = generateHtmlTemplate(frontmatter, htmlContent);
+    // Generar HTML completo: cargar navbar/footer desde componentes del sitio
+    const baseDir = path.resolve(__dirname, '..');
+    const navbarPath = path.join(baseDir, 'components', 'navbar.html');
+    const footerPath = path.join(baseDir, 'components', 'footer.html');
+    const navbarHtml = loadComponent(navbarPath);
+    const footerHtml = loadComponent(footerPath);
+
+    const htmlFinal = generateHtmlTemplate(frontmatter, htmlContent, navbarHtml, footerHtml);
 
     // Crear directorio si no existe
     const dirPath = path.dirname(htmlPath);
