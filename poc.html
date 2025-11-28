@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción al Hacking Ético</title>
+    <style>/* ====================================================================== */
+/* VARIABLES GLOBALES */
+/* ====================================================================== */
+:root {
+  --color-dark: #0f0f0f;
+  --color-darker: #0a0a0a;
+  --color-text: #e0e0e0;
+  --color-accent: #00d4ff;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+}
+
+/* ====================================================================== */
+/* RESET GLOBAL DE ESTILOS */
+/* ====================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-dark);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* ====================================================================== */
+/* NAVBAR (BARRA SUPERIOR) */
+/* ====================================================================== */
+.navbar {
+  background-color: var(--color-darker);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.navbar-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 14px;
+}
+
+.navbar-links a:hover {
+  color: var(--color-accent);
+}
+
+/* ====================================================================== */
+/* FOOTER (PIE DE PÁGINA) */
+/* ====================================================================== */
+.footer {
+  background-color: var(--color-darker);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-lg) 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  text-align: center;
+}
+
+.footer p {
+  font-size: 13px;
+  color: rgba(224, 224, 224, 0.7);
+}
+
+/* ====================================================================== */
+/* GRID DE POSTS DEL BLOG */
+/* ====================================================================== */
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+  justify-content: center; /* centra cuando hay pocos posts */
+  margin-top: 40px;
+}
+
+/* TARJETAS DE LOS POSTS */
+
+
+.post-card {
+  max-width: 350px; /* límite de ancho */
+  flex-grow: 0;     /* evita que se estire */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  background: var(--color-darker);
+  transition: border 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  border-radius: 6px;
+}
+
+.post-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+  background: #111;
+}
+
+.post-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* TÍTULO DEL POST */
+.post-card h2 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+/* DESCRIPCIÓN DEL POST */
+.post-card p {
+  color: rgba(224, 224, 224, 0.7);
+  font-size: 0.95rem;
+}
+
+/* ====================================================================== */
+/* IMÁGENES DE PORTADA DE LOS POSTS – CONTROLADAS Y ESTÉTICAS */
+/* ====================================================================== */
+
+
+.post-card .post-thumb {
+  width: 100%;
+  height: 180px;                /* Altura fija, consistente */
+  max-height: 180px;            /* No crece más que esto */
+  object-fit: cover;            /* Mantiene proporción sin deformar */
+  object-position: center;      /* Centra el recorte */
+  display: block;
+  
+  border-radius: 6px 6px 0 0;   /* Encaja con la tarjeta */
+  margin-bottom: 12px;
+  background-color: #111;       /* Fondo por si la imagen tarda en cargar */
+}
+
+/* ========================================================= */
+/* BUSCADOR DE POSTS */
+/* ========================================================= */
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  color: var(--color-text);
+  font-size: 15px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: var(--color-accent);
+}
+
+</style>
+</head>
+<body>
+    <div id="navbar"><nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">Lado B</div>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="paths.html">Paths</a></li>
+    </ul>
+  </div>
+</nav>
+
+</div>
+    <main style="max-width:1200px;margin:0 auto;padding:60px 16px;">
+        <article>
+            <h1>Introducción al Hacking Ético</h1>
+            <p style="color:#aaa;font-size:14px;">2025-11-26</p>
+            <div><h1>Introducción al Hacking Ético</h1>
+<p>El hacking ético es una disciplina cada vez más importante en el mundo de la ciberseguridad. En este artículo, exploraremos qué es, sus principios y cómo puedes comenzar tu viaje.</p>
+<h2>¿Qué es el Hacking Ético?</h2>
+<p>El hacking ético, también conocido como <strong>white hat hacking</strong>, es la práctica de identificar vulnerabilidades en sistemas de computadora de forma legal y ética, con el objetivo de mejorar la seguridad.</p>
+<blockquote>
+<p>El hacker ético trabaja <strong>con permiso</strong> para proteger y mejorar la seguridad.</p>
+</blockquote>
+<h3>Diferencias clave:</h3>
+<ul>
+<li><strong>White Hat</strong>: Hacker ético, autorizado</li>
+<li><strong>Black Hat</strong>: Hacker malicioso, no autorizado</li>
+<li><strong>Gray Hat</strong>: Zona intermedia, a menudo ilegal</li>
+</ul>
+<h2>Principios del Hacking Ético</h2>
+<ol>
+<li><strong>Autorización</strong>: Siempre obtener permiso explícito</li>
+<li><strong>Confidencialidad</strong>: Proteger la información sensible</li>
+<li><strong>Integridad</strong>: No modificar sistemas sin autorización</li>
+<li><strong>Reporte</strong>: Documentar hallazgos adecuadamente</li>
+<li><strong>Responsabilidad</strong>: Divulgación responsable de vulnerabilidades</li>
+</ol>
+<h2>Áreas principales</h2>
+
+<h3>Pentesting Web</h3>
+<p>Análisis de aplicaciones web para encontrar vulnerabilidades como SQL Injection, XSS, etc.</p>
+<h3>Pentesting de Sistemas</h3>
+<p>Evaluación de infraestructura, servidores y redes.</p>
+<h3>Social Engineering</h3>
+<p>Pruebas de seguridad basadas en el factor humano.</p>
+<h2>Cómo comenzar</h2>
+<h3>Paso 1: Fundamentos</h3>
+<ul>
+<li>Aprende redes y protocolos (TCP/IP)</li>
+<li>Domina línea de comandos</li>
+<li>Entiende sistemas operativos</li>
+</ul>
+<h3>Paso 2: Herramientas</h3>
+<pre class="codehilite"><code class="language-bash"># Instalación de Kali Linux
+sudo apt-get update
+sudo apt-get install kali-linux-full
+</code></pre>
+
+<h3>Paso 3: Práctica</h3>
+<ul>
+<li>HackTheBox</li>
+<li>TryHackMe</li>
+<li>DVWA (Damn Vulnerable Web Application)</li>
+</ul>
+<h2>Recursos útiles</h2>
+<ul>
+<li><a href="https://owasp.org">OWASP Top 10</a></li>
+<li><a href="https://cwe.mitre.org">CWE - Common Weakness Enumeration</a></li>
+<li><a href="https://www.eccouncil.org">Certificaciones: CEH, OSCP, etc.</a></li>
+</ul>
+<hr />
+<p><strong>Recuerda</strong>: El hacking ético es una carrera gratificante que combina técnica, creatividad y responsabilidad. ¡Comienza hoy tu viaje!</p></div>
+        </article>
+    </main>
+    <div id="footer"><footer class="footer">
+  <div class="footer-container">
+    <p>&copy; 2025 B3rm3ll0n | Hacking por loles</p>
+  </div>
+</footer>
+</div>
+</body>
+</html>
