@@ -91,10 +91,26 @@ function generateHtmlTemplate(front, htmlContent) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${front.title}</title>
-
+    
     <!-- Theme global -->
     <link rel="stylesheet" href="/assets/css/main.css">
-</head>
+    <!-- Cargar componentes -->
+<script>
+fetch("../../components/navbar.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("navbar").innerHTML = html;
+  });
+
+// Cargar footer
+fetch("../components/footer.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("footer").innerHTML = html;
+  });
+</script>
+
+  </head>
 <body>
 
     <!-- NAVBAR dinámica -->
@@ -114,17 +130,7 @@ ${htmlContent}
     <!-- FOOTER dinámico -->
     <div id="footer"></div>
 
-    <!-- Cargar componentes -->
-    <script>
-      fetch("/components/navbar.html")
-        .then(r => r.text())
-        .then(h => document.getElementById("navbar").innerHTML = h);
-
-      fetch("/components/footer.html")
-        .then(r => r.text())
-        .then(h => document.getElementById("footer").innerHTML = h);
-    </script>
-
+    
 </body>
 </html>`;
 }
