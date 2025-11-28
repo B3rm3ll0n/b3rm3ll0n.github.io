@@ -94,3 +94,45 @@ main {
   font-size: 13px;
   color: rgba(224, 224, 224, 0.7);
 }
+
+/* ------------------------------------------------------------- */
+/* GRID DE POSTS (MERGEADO Y ADAPTADO A TU ESTÉTICA OSCURA) */
+/* ------------------------------------------------------------- */
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: 40px;
+}
+
+.post-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  background: var(--color-darker);
+  transition: border 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  border-radius: 6px;
+}
+
+.post-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+  background: #111;
+}
+
+.post-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.post-card h2 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+.post-card p {
+  color: rgba(224, 224, 224, 0.7);
+  font-size: 0.95rem;
+}
