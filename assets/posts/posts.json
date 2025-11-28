@@ -1,20 +1,93 @@
 [
   {
+    "id": "post1",
     "title": "Introducción al Recon",
-    "excerpt": "Conceptos clave para iniciar un proceso de reconocimiento efectivo.",
-    "url": "./posts/post1.html",
-    "image": "./assets/images/idle.jpg"
+    "description": "Conceptos clave para iniciar un proceso de reconocimiento efectivo.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post1.html"
   },
   {
+    "id": "post2",
     "title": "Enumeración Web Básica",
-    "excerpt": "Cómo mapear superficies de ataque en sitios web.",
-    "url": "./posts/post2.html",
-    "image": "./assets/images/idle.jpg"
+    "description": "Cómo mapear superficies de ataque en sitios web.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post2.html"
   },
   {
+    "id": "post3",
     "title": "Notas de Bug Bounty",
-    "excerpt": "Ideas y metodologías para organizar tus hallazgos.",
-    "url": "./posts/post3.html",
-    "image": "./assets/images/idle.jpg"
+    "description": "Ideas y metodologías para organizar tus hallazgos.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post3.html"
+  },
+  {
+    "id": "post2",
+    "title": "Enumeración Web Básica",
+    "description": "Cómo mapear superficies de ataque en sitios web.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post2.html"
+  },
+  {
+    "id": "post3",
+    "title": "Notas de Bug Bounty",
+    "description": "Ideas y metodologías para organizar tus hallazgos.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post3.html"
+  },
+  {
+    "id": "post2",
+    "title": "Enumeración Web Básica",
+    "description": "Cómo mapear superficies de ataque en sitios web.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post2.html"
+  },
+  {
+    "id": "post3",
+    "title": "Notas de Bug Bounty",
+    "description": "Ideas y metodologías para organizar tus hallazgos.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post3.html"
+  },
+  {
+    "id": "post2",
+    "title": "Enumeración Web Básica",
+    "description": "Cómo mapear superficies de ataque en sitios web.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post2.html"
+  },
+  {
+    "id": "post3",
+    "title": "Notas de Bug Bounty",
+    "description": "Ideas y metodologías para organizar tus hallazgos.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post3.html"
+  },
+  {
+    "id": "post2",
+    "title": "Enumeración Web Básica",
+    "description": "Cómo mapear superficies de ataque en sitios web.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post2.html"
+  },
+  {
+    "id": "post3",
+    "title": "Notas de Bug Bounty",
+    "description": "Ideas y metodologías para organizar tus hallazgos.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post3.html"
+  },
+  {
+    "id": "post2",
+    "title": "Enumeración Web Básica",
+    "description": "Cómo mapear superficies de ataque en sitios web.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post2.html"
+  },
+  {
+    "id": "post3",
+    "title": "Notas de Bug Bounty",
+    "description": "Ideas y metodologías para organizar tus hallazgos.",
+    "thumbnail": "./assets/images/idle.jpg",
+    "url": "./posts/post3.html"
   }
 ]
