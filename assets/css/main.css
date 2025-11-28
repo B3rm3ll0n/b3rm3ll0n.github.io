@@ -1,4 +1,6 @@
-/* Root Variables */
+/* ====================================================================== */
+/* VARIABLES GLOBALES */
+/* ====================================================================== */
 :root {
   --color-dark: #0f0f0f;
   --color-darker: #0a0a0a;
@@ -8,7 +10,9 @@
   --spacing-lg: 24px;
 }
 
-/* Global Reset */
+/* ====================================================================== */
+/* RESET GLOBAL DE ESTILOS */
+/* ====================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +36,9 @@ main {
   flex: 1;
 }
 
-/* Navbar Styles */
+/* ====================================================================== */
+/* NAVBAR (BARRA SUPERIOR) */
+/* ====================================================================== */
 .navbar {
   background-color: var(--color-darker);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -75,7 +81,9 @@ main {
   color: var(--color-accent);
 }
 
-/* Footer Styles */
+/* ====================================================================== */
+/* FOOTER (PIE DE PÁGINA) */
+/* ====================================================================== */
 .footer {
   background-color: var(--color-darker);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -95,9 +103,9 @@ main {
   color: rgba(224, 224, 224, 0.7);
 }
 
-/* ------------------------------------------------------------- */
-/* GRID DE POSTS (MERGEADO Y ADAPTADO A TU ESTÉTICA OSCURA) */
-/* ------------------------------------------------------------- */
+/* ====================================================================== */
+/* GRID DE POSTS DEL BLOG */
+/* ====================================================================== */
 
 .post-grid {
   display: grid;
@@ -106,6 +114,7 @@ main {
   margin-top: 40px;
 }
 
+/* TARJETAS DE LOS POSTS */
 .post-card {
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 20px;
@@ -126,13 +135,33 @@ main {
   display: block;
 }
 
+/* TÍTULO DEL POST */
 .post-card h2 {
   margin-bottom: 8px;
   font-size: 1.2rem;
   color: var(--color-text);
 }
 
+/* DESCRIPCIÓN DEL POST */
 .post-card p {
   color: rgba(224, 224, 224, 0.7);
   font-size: 0.95rem;
 }
+
+/* ====================================================================== */
+/* IMÁGENES DE PORTADA DE LOS POSTS – CONTROLADAS Y ESTÉTICAS */
+/* ====================================================================== */
+
+.post-card .post-thumb {
+  width: 100%;
+  height: 180px;                /* Altura fija, consistente */
+  max-height: 180px;            /* No crece más que esto */
+  object-fit: cover;            /* Mantiene proporción sin deformar */
+  object-position: center;      /* Centra el recorte */
+  display: block;
+  
+  border-radius: 6px 6px 0 0;   /* Encaja con la tarjeta */
+  margin-bottom: 12px;
+  background-color: #111;       /* Fondo por si la imagen tarda en cargar */
+}
+

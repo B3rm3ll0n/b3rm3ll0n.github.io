@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Introducción al Recon",
+    "excerpt": "Conceptos clave para iniciar un proceso de reconocimiento efectivo.",
+    "url": "./posts/post1.html",
+    "image": "./assets/images/idle.jpg"
+  },
+  {
+    "title": "Enumeración Web Básica",
+    "excerpt": "Cómo mapear superficies de ataque en sitios web.",
+    "url": "./posts/post2.html",
+    "image": "./assets/images/idle.jpg"
+  },
+  {
+    "title": "Notas de Bug Bounty",
+    "excerpt": "Ideas y metodologías para organizar tus hallazgos.",
+    "url": "./posts/post3.html",
+    "image": "./assets/images/idle.jpg"
+  }
+]
