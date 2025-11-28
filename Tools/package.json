@@ -1,0 +1,25 @@
+{
+  "name": "md2html-converter",
+  "version": "1.0.0",
+  "description": "Convierte archivos Markdown a HTML para posts de blog",
+  "main": "md2html.js",
+  "type": "module",
+  "bin": {
+    "md2html": "md2html.js"
+  },
+  "scripts": {
+    "start": "node md2html.js",
+    "test": "node md2html.js ../assets/posts/introduccion-hacking-etico.md ../assets/posts/introduccion-hacking-etico.html"
+  },
+  "keywords": [
+    "markdown",
+    "html",
+    "converter",
+    "blog"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^12.0.0"
+  }
+}

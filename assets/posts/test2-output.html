@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerabilidades OWASP Top 10</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; background: #f9f9f9; }
+        main { max-width: 1200px; margin: 0 auto; padding: 60px 16px; }
+        article { background: white; border-radius: 8px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        h1 { font-size: 2.5em; margin-bottom: 16px; color: #1a1a1a; }
+        h2 { font-size: 1.8em; margin: 24px 0 16px 0; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; }
+        h3 { font-size: 1.4em; margin: 20px 0 12px 0; color: #34495e; }
+        p { margin-bottom: 16px; text-align: justify; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', Courier, monospace; color: #d73a49; }
+        pre { background: #282c34; color: #abb2bf; padding: 16px; border-radius: 6px; overflow-x: auto; margin: 16px 0; }
+        pre code { background: none; padding: 0; color: inherit; }
+        blockquote { border-left: 4px solid #3498db; padding-left: 16px; margin: 16px 0; color: #666; font-style: italic; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        table th { background: #3498db; color: white; padding: 12px; text-align: left; }
+        table td { border: 1px solid #ddd; padding: 12px; }
+        table tr:nth-child(even) { background: #f9f9f9; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        img { max-width: 100%; height: auto; margin: 16px 0; border-radius: 6px; }
+        .meta { color: #aaa; font-size: 14px; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <h1>Vulnerabilidades OWASP Top 10</h1>
+            <p class="meta">2025-11-20</p>
+            <div>
+<h1>Vulnerabilidades OWASP Top 10</h1>
+<p>El OWASP Top 10 es una lista de las vulnerabilidades web más críticas y comunes. Entenderlas es esencial para cualquier profesional de seguridad.</p>
+<h2>1. Broken Access Control</h2>
+<p>La autenticación fallida es la vulnerabilidad #1. Los atacantes pueden:</p>
+<ul>
+<li>Eludir controles de acceso</li>
+<li>Escalar privilegios</li>
+<li>Acceder a recursos no autorizados</li>
+</ul>
+<h3>Ejemplo vulnerable:</h3>
+<pre><code class="language-python">if not user.is_authenticated:
+    redirect_to_login()
+# Pero falta verificación de autorización
+return get_user_data(user_id)  # ¡Sin validar si pertenece al usuario!
+</code></pre>
+<h3>Solución:</h3>
+<pre><code class="language-python">if not user.is_authenticated:
+    redirect_to_login()
+if not user.can_access(user_id):  # Verificar autorización
+    raise PermissionDenied()
+return get_user_data(user_id)
+</code></pre>
+<h2>2. Cryptographic Failures</h2>
+<p>Fallos en criptografía pueden exponer datos sensibles.</p>
+<p><strong>No hacer:</strong></p>
+<ul>
+<li>Almacenar contraseñas en texto plano</li>
+<li>Usar algoritmos débiles (MD5, SHA1)</li>
+<li>No usar HTTPS</li>
+</ul>
+<p><strong>Hacer:</strong></p>
+<ul>
+<li>Usar bcrypt, scrypt o Argon2 para contraseñas</li>
+<li>HTTPS en todo el sitio</li>
+<li>Encriptar datos sensibles en reposo</li>
+</ul>
+<h2>3. Injection</h2>
+<p>SQL Injection, Command Injection, LDAP Injection...</p>
+<h3>SQL Injection vulnerable:</h3>
+<pre><code class="language-python">query = f&quot;SELECT * FROM users WHERE email = &#39;{email}&#39;&quot;
+cursor.execute(query)
+# Si email = &quot;admin&#39;--&quot;, obtiene todos los usuarios!
+</code></pre>
+<h3>SQL Injection seguro:</h3>
+<pre><code class="language-python">query = &quot;SELECT * FROM users WHERE email = %s&quot;
+cursor.execute(query, (email,))  # Parametrizado
+</code></pre>
+<h2>4. Insecure Design</h2>
+<p>Falta de diseño de seguridad desde el inicio.</p>
+<ul>
+<li>No implementar rate limiting</li>
+<li>No validar entrada del usuario</li>
+<li>Asumir que los datos vienen de fuentes confiables</li>
+</ul>
+<h2>5. Security Misconfiguration</h2>
+<p>Configuraciones inseguras por defecto:</p>
+<ul>
+<li>Puertos abiertos innecesarios</li>
+<li>Servicios innecesarios activos</li>
+<li>Versiones antiguas sin parchear</li>
+</ul>
+<h2>6. Vulnerable and Outdated Components</h2>
+<p>Usar librerías con vulnerabilidades conocidas.</p>
+<pre><code class="language-bash"># Verificar dependencias
+npm audit
+pip check
+</code></pre>
+<h2>7. Authentication Failures</h2>
+<ul>
+<li>Contraseñas débiles sin validación</li>
+<li>Falta de 2FA</li>
+<li>Sessions sin timeout</li>
+</ul>
+<h2>8. Software and Data Integrity Failures</h2>
+<ul>
+<li>Actualizaciones inseguras</li>
+<li>CI/CD inseguro</li>
+<li>Datos no validados</li>
+</ul>
+<h2>9. Logging and Monitoring Failures</h2>
+<p>No registrar eventos de seguridad suficientes.</p>
+<h2>10. Server-Side Request Forgery (SSRF)</h2>
+<p>El servidor realiza peticiones a recursos no permitidos.</p>
+<pre><code class="language-python"># Vulnerable
+image_url = request.args.get(&#39;image_url&#39;)
+response = requests.get(image_url)  # ¿Qué si es http://localhost/admin?
+
+# Seguro
+allowed_domains = [&#39;images.example.com&#39;]
+if not any(image_url.startswith(d) for d in allowed_domains):
+    raise ValueError(&quot;Dominio no permitido&quot;)
+response = requests.get(image_url)
+</code></pre>
+<h2>Mitigación General</h2>
+<ol>
+<li><strong>Input Validation</strong>: Validar toda entrada</li>
+<li><strong>Output Encoding</strong>: Encodear salida</li>
+<li><strong>Principle of Least Privilege</strong>: Mínimos permisos</li>
+<li><strong>Defense in Depth</strong>: Múltiples capas</li>
+<li><strong>Security Testing</strong>: Pruebas regulares</li>
+<li><strong>Keep Updated</strong>: Parchear regularmente</li>
+</ol>
+<h2>Referencias</h2>
+<ul>
+<li><a href="https://owasp.org/Top10/">OWASP Top 10 2023</a></li>
+<li><a href="https://owasp.org/www-project-api-security/">OWASP API Top 10</a></li>
+<li><a href="https://cwe.mitre.org/top25/">CWE/SANS Top 25</a></li>
+</ul>
+<hr>
+<p><strong>Recuerda</strong>: La seguridad es un proceso continuo, no un destino.</p>
+
+            </div>
+        </article>
+    </main>
+</body>
+</html>
